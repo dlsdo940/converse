@@ -163,7 +163,7 @@
         }
         /*.header_layout_1 .header-lnb a {
             color: #fff;*/
-        }
+        /*}*/
         .header_layout_1 .header-lnb .header-item {
             display: table-cell;
             vertical-align: middle;
@@ -426,6 +426,30 @@
 			content: '';
 			display: block;
 		}
+
+/* 슬라이드 영역의 크기. 여기서 설정한 크기 만큼 슬라이드가 표시된다. */
+#shoes-slide-container { width: 100%; height: 92%; padding-top: 70px; }
+
+/******** 좌우 화살표 처리 ********/
+#shoes-slides .slides-navigation { height: 100%; top: 0; }
+
+#shoes-slides .slides-navigation a {
+    display: block;
+    text-indent: -10000px;
+    width: 50px;
+    height: 100%;
+    background: url(img/arrow.png) no-repeat;
+}
+
+#shoes-slides .slides-navigation a:first-child { background-position: -50px center; }
+#shoes-slides .slides-navigation a:last-child { background-position: 0px center; }
+
+#shoes-slide-container:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
 		/*CONTENT*/
 		.content-container .tab-title-container {
 			margin: 0 auto 20px auto;
@@ -528,11 +552,11 @@
     	.border-line {
     		border-top: 1px solid #e5e5e5;
     	}
-    	@media (min-width: 768px)
+    	@media (min-width: 768px){
     	.uk-width-medium-1-1 {
     		width:100%;
     	}
-    	@media (min-width: 480px)
+    	@media (min-width: 480px){
     	.uk-width-small-1-1 {
     		width:100%;
     	}
@@ -724,11 +748,11 @@
     		padding-top: 10px;
     		border-top: 1px solid #e5e5e5;
     	}
-    	@media (min-width: 768px)
+    	@media (min-width: 768px){
     	.uk-width-medium-1-1 {
     		width:100%;
     	}
-    	@media (min-width: 480px)
+    	@media (min-width: 480px){
     	.uk-width-samll-1-1 {
     		width:100%;
     	}
@@ -741,7 +765,7 @@
     		max-width: 1300px;
     		margin: 0 auto;
     	}
-    	@media (min-width: 768px)
+    	@media (min-width: 768px){
     	.uk-width-medium-1-5, uk-width-medium-2-10 {
     		width:20%;
     	}
@@ -862,7 +886,7 @@
 			vertical-align: top;
 			width: 200px;
 			position: absolute;
-			z-index: 970px;
+			z-index: 970;
 		}
 		.select-external-menu .external-list li {
 			margin:2px 0;
