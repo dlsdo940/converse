@@ -1,0 +1,1 @@
+(function () {try{var u=document.URL,k=u.match(/beusable_viewer=([^&#]*)/),a="//rum.beusable.net/script/checker/__usernum__/259d98e586?url=",b="//api.beusably.net/script/";__beusablerumclient__.load(k&&k[1]?b+k[1]:a+encodeURIComponent(u));}catch(e){__beusablerumclient__.load(k&&k[1]?b+k[1]:a);}})()

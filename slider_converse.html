@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jquery plugin</title>
+    <!-- 플러그인 CSS 참조 -->
+    <link rel="stylesheet" href="plugins/superslides/stylesheets/superslides.css">
+    <style>
+        /* 페이지 전체 여백 설정 및 페이지 기본 크기 구성 */
+        html, body { padding: 0; margin: 0; width: 100%; height: 100%; }
+        /* 슬라이드 영역의 크기. 여기서 설정한 크기 만큼 슬라이드가 표시된다. */
+        #slide-container { width: 100%; height: 100%; }
+
+        /******** 좌우 화살표 처리 ********/
+        #slides .slides-navigation { height: 100%; top: 0; }
+
+        #slides .slides-navigation a {
+            display: block;
+            text-indent: -10000px;
+            width: 50px;
+            height: 100%;
+            background: url(img/arrow.png) no-repeat;
+        }
+
+        #slides .slides-navigation a:first-child { background-position: -50px center; }
+        #slides .slides-navigation a:last-child { background-position: 0px center; }
+    </style>
+</head>
+
+<body>
+    <!-- 슬라이드의 부모(높이와 넓이를 구성한다) -->
+    <div id="slide-container">
+        <div id="slides">
+            <ul class="slides-container">
+                <!-- 슬라이드 1 -->
+                <li>
+                    <img src="converse_files/onestar_womens_PC.jpg" />
+                </li>
+                <!-- 슬라이드 2 -->
+                <li>
+                    <img src="converse_files/shop_now_pc.gif" />
+                </li>
+                <!-- 슬라이드 3 -->
+                <li>
+                    <img src="converse_files/FB_LIVE_PC.jpg" />
+                </li>
+                <!-- 슬라이드 4 -->
+                <li>
+                    <img src="converse_files/EX_BOOTS_PC.jpg" />
+                </li>
+                <!-- 슬라이드 5 -->
+                <li>
+                    <img src="converse_files/FR_PC_ssssssssss.jpg" />
+                </li>
+            </ul>
+            <!-- 좌우 이동 버튼 (필요 없을 경우 구현하지 않아도 된다) -->
+            <nav class="slides-navigation">
+                <a href="#" class="next">Next</a>
+                <a href="#" class="prev">Previous</a>
+            </nav>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- 플러그인 JS 참조 -->
+    <script src="plugins/jquery.easing.1.3.js"></script>
+    <script src="plugins/superslides/jquery.superslides.min.js"></script>
+    <script>
+        $(function() {
+            /** `#slides`요소에 대해 플러그인 적용 */
+            $('#slides').superslides({
+                inherit_width_from: '#slide-container',   // 슬라이드의 넓이를 구성할 부모 요소
+                inherit_height_from: '#slide-container',  // 슬라이드의 높이를 구성할 부모 요소
+                play: 4000,          // 재생시간 (1/1000초 단위). 미지정시 자동재생 안됨.
+                animation: 'slide'   // 애니메이션 옵션(fade/slide) (미적용시 슬라이드)
+            });
+        });
+    </script>
+</body>
+
+</html>
+
