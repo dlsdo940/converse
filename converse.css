@@ -449,7 +449,33 @@
     content: '';
     display: block;
 }
-
+#shoes-slide-container {
+	width: 1300px;
+	margin: auto;
+}
+.slides-container .slide-shoes {
+	width: 25%;
+	height: 252px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	text-align: center;
+}
+.slides-container .slide-shoes span{
+	padding-top: 20px;
+}
+.slide-shoes .shoes { 
+	width: 200px;
+	height: 200px;
+}
+.slide-shoes .shoes1{
+background: url(converse_files/157485C_157485C_primary.jpg);
+background-size: cover;
+}
+.slide-shoes .shoes2{
+background: url(converse_files/157486C_157486C_primary.jpg);
+background-size: cover;
+}
 		/*CONTENT*/
 		.content-container .tab-title-container {
 			margin: 0 auto 20px auto;
@@ -682,6 +708,10 @@
     		background-position: -22px -320px;
     		z-index: 10;
     	}
+		#newsletter-chk:checked + label .brz-icon-checkbox {
+				background-position: -89px -320px;
+		}
+
     	.icon-background, .brz-icon-instagram, .brz-icon-facebook, .brz-icon-twitter, .brz-icon-cart, .brz-icon-search, .brz-icon-registerdone, .brz-icon-star_small, .brz-icon-star_normal, .brz-icon-star_large, .brz-icon-star_xlarge, .star-bullet, .brz-icon-bambug, .brz-icon-bambug_small, .brz-icon-logo, .brz-icon-info, .brz-icon-select_up, .brz-icon-select_down, .brz-icon-opt-select_up, .brz-icon-opt-select_down, .brz-icon-slidebar, .brz-icon-radio, .brz-icon-checkbox, .brz-icon-delete, .brz-icon-file, .brz-icon-img-file, .brz-icon-arrow, .file-remove_btn, .popup-close_btn {
     		overflow: hidden;
     		background-image:url(converse_files/icon.png);
